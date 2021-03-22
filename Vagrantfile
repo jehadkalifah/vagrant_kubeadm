@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 	#subconfig.vm.boot_timeout = 5
 	subconfig.vm.box_check_update = false
     subconfig.vm.hostname = "master01"
-    subconfig.vm.disksize.size = '100GB'  
+    subconfig.disksize.size = '100GB'  
     subconfig.vm.network "public_network", ip: "192.168.0.30"
     subconfig.vm.provider "virtualbox" do |v|
        v.memory = 3072
@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
 	#subconfig.vm.boot_timeout = 5
 	subconfig.vm.box_check_update = false
     subconfig.vm.hostname = "worker01"
-    subconfig.vm.disksize.size = '100GB'	  
+    subconfig.disksize.size = '100GB'	  
     subconfig.vm.network "public_network", ip: "192.168.0.40"
     subconfig.vm.provider "virtualbox" do |vb|
        vb.memory = 3072
@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
 	#subconfig.vm.boot_timeout = 5
 	subconfig.vm.box_check_update = false
     subconfig.vm.hostname = "worker02"
-    subconfig.vm.disksize.size = '100GB'	    
+    subconfig.disksize.size = '100GB'	    
     subconfig.vm.network "public_network", ip: "192.168.0.50"
     subconfig.vm.provider "virtualbox" do |vb|
        vb.memory = 3072
